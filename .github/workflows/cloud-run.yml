@@ -21,7 +21,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
-  RUN_REGION: us-central1
+  RUN_REGION: southamerica-east1
   SERVICE_NAME: ml-api
   BASIC_AUTH_USERNAME: ${{ secrets.BASIC_AUTH_USERNAME }}
   BASIC_AUTH_PASSWORD: ${{ secrets.BASIC_AUTH_PASSWORD }}
@@ -48,7 +48,7 @@ jobs:
         gcloud builds submit \
           --quiet \
           --config cloudbuild.yaml \
-          --substitutions _BASIC_AUTH_USERNAME=$BASIC_AUTH_USERNAME,_BASIC_AUTH_PASSWORD=$BASIC_AUTH_PASSWORD,_IMAGE_TAG=$gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
+          --substitutions _BASIC_AUTH_USERNAME=$BASIC_AUTH_USERNAME,_BASIC_AUTH_PASSWORD=$BASIC_AUTH_PASSWORD,_IMAGE_TAG=gcr.io/$PROJECT_ID/$SERVICE_NAME/$GITHUB_SHA
 
     # Deploy image to Cloud Run
     - name: Deploy
@@ -56,7 +56,7 @@ jobs:
         gcloud run deploy "$SERVICE_NAME" \
           --quiet \
           --region "$RUN_REGION" \
-          --image "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA" \
+          --image "gcr.io/$PROJECT_ID/$SERVICE_NAME/$GITHUB_SHA" \
           --platform "managed" \
           --allow-unauthenticated \
           --port 5000
