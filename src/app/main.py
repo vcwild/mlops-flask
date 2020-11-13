@@ -6,7 +6,7 @@ import pickle
 import os
 
 
-model = pickle.load(open('../../models/model.hdf5', 'rb'))
+model = pickle.load(open('models/model.hdf5', 'rb'))
 columns = ['size', 'year', 'garage']
 
 app = Flask(__name__)
