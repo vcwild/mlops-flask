@@ -1,9 +1,37 @@
 mlops-deploy
 ==============================
 
-MLOPS model deployment
+## APIs
+### Sentiment Analysis
+Machine Learning sentiment analysis API is available at: [https://ml-api.run.app/sentiment/](https://ml-api-qinvsjdm4a-rj.a.run.app/sentiment/)
 
-Project Organization
+### House Prices
+Regression model API available at: [https://ml-api.run.app/prices/](https://ml-api-qinvsjdm4a-rj.a.run.app/prices/)
+- Requires POST method
+- Header Content-Type: application/json
+
+Example application:
+- Request
+```{javascript}
+{
+	"size":140,
+	"year":2005,
+	"garage":1
+}
+```
+- Response
+```{javascript}
+{
+  "price": 185317.82054
+}
+```
+
+## Automations
+
+Machine learning model deployment on GCP automated with GitHub Actions.
+
+## Project Organization
+
 ------------
 
     ├── LICENSE
