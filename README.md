@@ -7,24 +7,83 @@ Machine Learning sentiment analysis API is available at: [https://ml-api.run.app
 
 ### House Prices
 Regression model API available at: [https://ml-api.run.app/prices/](https://ml-api-qinvsjdm4a-rj.a.run.app/prices/)
-- Requires POST method
+- Requires: POST method, Basic Auth
 - Header Content-Type: application/json
 
-Example application:
-- Request
-```{javascript}
-{
-	"size":140,
-	"year":2005,
-	"garage":1
-}
+## Local deployment
+
+LINUX
+
+Install Docker (skip this if you already have Docker installed)
+
 ```
-- Response
-```{javascript}
-{
-  "price": 185317.82054
-}
+# get Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+# create Docker group
+sudo groupadd docker
+# add user to the Docker group
+sudo usermod -aG docker $USER
 ```
+
+Get container
+
+```
+docker run -d -p 5000:5000 vcwild/mlops-run
+```
+
+**Alternatively** using Conda environment (skip this if you used the previous container)
+
+```
+docker run -d -p 5000:5000 vcwild/conda-run
+```
+
+WINDOWS
+
+- [Install Docker Desktop](https://docs.docker.com/docker-for-windows/install/)
+- [Get container](https://hub.docker.com/r/vcwild/mlops-run)
+
+## How it works
+
+### Endpoints
+
+#### [GET]
+
+- sentiment/\<sentiment>
+
+#### [POST]
+
+- prices
+  - Request
+  ```{javascript}
+  {
+    "size":int,
+    "year":int,
+    "garage":int
+  }
+  ```
+  - Response
+  ```{javascript}
+  {
+    "price": float
+  }
+  ```
+
+  **Example implementation**
+
+  - Request
+  ```{javascript}
+  {
+    "size":140,
+    "year":2005,
+    "garage":1
+  }
+  ```
+  - Response
+  ```{javascript}
+  {
+    "price": 185317.82054
+  }
+  ```
 
 ## Automations
 
