@@ -1,8 +1,6 @@
-FROM python:3.7-slim
+FROM continuumio/miniconda3
 
 WORKDIR /usr
-
-LABEL maintainer="vcwild@gmail.com"
 
 # Use build arguments
 ARG BASIC_AUTH_USERNAME_ARG
@@ -13,14 +11,15 @@ ENV BASIC_AUTH_USERNAME=$BASIC_AUTH_USERNAME_ARG
 ENV BASIC_AUTH_PASSWORD=$BASIC_AUTH_PASSWORD_ARG
 
 # Environment creation
-COPY ./requirements.txt /usr/requirements.txt
-RUN pip3 install -r requirements.txt
+COPY ./environment.yml /usr/environment.yml
+RUN conda env create -f environment.yml
+
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "myenv", "/bin/zsh", "-c"]
 
 # Copy files to working directory
 COPY ./src /usr/src
 COPY ./models /usr/models
 
 # Define entry point
-ENTRYPOINT ["python3"]
-
-CMD ["src/app/main.py"]
+ENTRYPOINT ["conda", "run", "-n", "myenv", "python3", "src/app/main.py"]
