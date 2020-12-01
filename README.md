@@ -1,6 +1,8 @@
 mlops-deploy
 ==============================
 
+<!-- TOC -->autoauto- [APIs](#apis)auto  - [Sentiment Analysis](#sentiment-analysis)auto  - [House Prices](#house-prices)auto- [Local deployment](#local-deployment)auto  - [LINUX](#linux)auto    - [Method 1](#method-1)auto    - [Method 2](#method-2)auto  - [WINDOWS](#windows)auto- [How it works](#how-it-works)auto  - [Endpoints](#endpoints)auto    - [[GET]](#get)auto    - [[POST]](#post)auto- [Automations](#automations)auto- [Project Organization](#project-organization)autoauto<!-- /TOC -->
+
 ## APIs
 ### Sentiment Analysis
 Machine Learning sentiment analysis API is available at: [https://ml-api.run.app/sentiment/](https://ml-api-qinvsjdm4a-rj.a.run.app/sentiment/)
