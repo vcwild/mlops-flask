@@ -4,9 +4,15 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/vcwild/mlops-flask">
+  <img alt="Workflow" src="https://img.shields.io/github/workflow/status/vcwild/mlops-flask/Build%20and%20Deploy%20to%20Cloud%20Run">
+
+  <img alt="Docker Cloud Automated build" src="https://img.shields.io/docker/cloud/automated/vcwild/mlops-run">
+
+  <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/vcwild/mlops-run">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/vcwild/mlops-flask">
+
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/vcwild/mlops-flask">
 
   <a href="https://github.com/vcwild/mlops-flask/blob/master/LICENSE.md">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
