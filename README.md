@@ -1,7 +1,24 @@
-mlops-deploy
-==============================
+<h1 align="center">
+  <img alt="MLOPS" src=".github/code-school.svg" width="150px" />
+</h1>
 
-<!-- TOC -->autoauto- [APIs](#apis)auto  - [Sentiment Analysis](#sentiment-analysis)auto  - [House Prices](#house-prices)auto- [Local deployment](#local-deployment)auto  - [LINUX](#linux)auto    - [Method 1](#method-1)auto    - [Method 2](#method-2)auto  - [WINDOWS](#windows)auto- [How it works](#how-it-works)auto  - [Endpoints](#endpoints)auto    - [[GET]](#get)auto    - [[POST]](#post)auto- [Automations](#automations)auto- [Project Organization](#project-organization)autoauto<!-- /TOC -->
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/vcwild/mlops-flask">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/vcwild/mlops-flask">
+
+  <a href="https://github.com/vcwild/mlops-flask/blob/master/LICENSE.md">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
+  <a>
+</p>
+
+<!-- TOC -->
+- [APIs](#apis)  
+- [Local deployment](#local-deployment)  
+- [How it works](#how-it-works)  
+- [Automations](#automations) 
+- [Project Organization](#project-organization)
+<!-- /TOC -->
 
 ## APIs
 ### Sentiment Analysis
