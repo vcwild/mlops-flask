@@ -1,5 +1,6 @@
 <h1 align="center">
-  <img alt="MLOPS" src=".github/code-school.svg" width="150px" />
+  <img alt="MLOPS" src=".github/code-school.svg" width="150px" /> <br/>
+  MLOps-Flask
 </h1>
 
 <p align="center">
@@ -14,8 +15,8 @@
 
 <!-- TOC -->
 - [APIs](#apis)  
-- [Local deployment](#local-deployment)  
-- [How it works](#how-it-works)  
+- [How it Works](#how-it-works)  
+- [Local Deployment](#local-deployment)  
 - [Automations](#automations) 
 - [Project Organization](#project-organization)
 <!-- /TOC -->
@@ -29,41 +30,7 @@ Regression model API available at: [https://ml-api.run.app/prices/](https://ml-a
 - Requires: POST method, Basic Auth
 - Header Content-Type: application/json
 
-## Local deployment
-
-### LINUX
-
-Install Docker (skip this if you already have Docker installed)
-
-```sh
-# get Docker
-curl -fsSL https://get.docker.com -o get-docker.sh
-# create Docker group
-sudo groupadd docker
-# add user to the Docker group
-sudo usermod -aG docker $USER
-```
-#### Method 1
-
-Get the default container
-
-```sh
-docker run -d -p 5000:5000 vcwild/mlops-run
-```
-#### Method 2
-
-By using the Miniconda environment
-
-```sh
-docker run -d -p 5000:5000 vcwild/conda-run
-```
-
-### WINDOWS
-
-- [Install Docker Desktop](https://docs.docker.com/docker-for-windows/install/)
-- [Get container](https://hub.docker.com/r/vcwild/mlops-run)
-
-## How it works
+## How it Works
 
 ### Endpoints
 
@@ -105,6 +72,40 @@ docker run -d -p 5000:5000 vcwild/conda-run
     "price": 185317.82054
   }
   ```
+
+## Local Deployment
+
+### LINUX Ubuntu/Debian
+
+Install Docker (skip this if you already have Docker installed)
+
+```sh
+# get Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+# create Docker group
+sudo groupadd docker
+# add user to the Docker group
+sudo usermod -aG docker $USER
+```
+#### Method 1
+
+Get the default container
+
+```sh
+docker run -d -p 5000:5000 vcwild/mlops-run
+```
+#### Method 2
+
+By using the Miniconda environment
+
+```sh
+docker run -d -p 5000:5000 vcwild/conda-run
+```
+
+### Windows
+
+- [Install Docker Desktop](https://docs.docker.com/docker-for-windows/install/)
+- [Get container](https://hub.docker.com/r/vcwild/mlops-run)
 
 ## Automations
 
