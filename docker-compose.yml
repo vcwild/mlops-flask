@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mlops-api:
+    build:
+      dockerfile: ./dockerfile
+      context: .
+    image: vcwild/mlops-run
+    container_name: mlops-api
+    networks: 
+      - backend
+    ports:
+      - "5000:5000"
+
+networks:
+  backend:
+    driver: bridge
